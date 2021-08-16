@@ -2,55 +2,66 @@
 
 console.log('smells like updog in here');
 
-<<<<<<< HEAD
-const kittenDiv = document.getElementById('locationProfiles');
-=======
 const locationDiv = document.getElementById('locationProfiles');
->>>>>>> class06-objects
 
 const seattle = {
-  name: 'Seattle',
+  location: 'Seattle',
   customers: null,
-  avgCookie: null,
+  cookies: null,
   getCustomers: function() {
     this.customers = `${_randomCustomers(23, 65)} customers`; 
-  }
+  },
+  getCookies: function() {
+    this.cookies = `${customersPerHour(this.customers)} cookies`; 
+  },
 }
 
 const tokyo = {
-  name: 'Tokyo',
+  location: 'Tokyo',
   customers: null,
-  avgCookie: null,
+  cookies: 1.2,
   getCustomers: function() {
     this.customers = `${_randomCustomers(3, 24)} customers`; 
-  }
+  },
+  getCookies: function() {
+    this.cookies = `${this.customers * } cookies`;
+  },
 }
 
 const dubai = {
-  name: 'Dubai',
+  location: 'Dubai',
   customers: null,
-  avgCookie: null,
+  cookies: 3.7,
   getCustomers: function() {
     this.customers = `${_randomCustomers(11, 38)} customers`; 
-  }
+  },
+  getCookies: function() {
+    this.cookies = `${this.customers * } cookies`; 
+  },
 }
 
 const paris = {
-  name: 'Paris',
+  location: 'Paris',
   customers: null,
-  avgCookie: null,
+  cookies: 2.3,
   getCustomers: function() {
     this.customers = `${_randomCustomers(20, 38)} customers`; 
-  }
+  },
+  getCookies: function() {
+    this.cookies = `${this.customers * } cookies`; 
+  },
 }
 
 const lima = {
-  name: 'Lima',
+  location: 'Lima',
   customers: null,
-  avgCookie: null,
+  cookies: 4.6,
   getCustomers: function() {
     this.customers = `${_randomCustomers(2, 16)} customers`; 
-  }
+  },
+  getCookies: function() {
+    this.cookies = `${this.customers * } cookies`;
+  },
 }
 
 // write a function that gets a random amount of customers
@@ -61,8 +72,17 @@ function _randomCustomers(min, max) {
   // returns the amount of customers
   return number;
 }
+
+// function that generates a random amount of customers per hour location is open
+function customersPerHour() {
+  let number = location.getCustomers() * location.cookies
+  return number;
+}
+
 seattle.getCustomers();
+seattle.getCookies();
 console.log(seattle);
+
 
 const salmonCookieLocations = [seattle, tokyo, dubai, paris, lima];
 // call getCustomers on all locations at once
@@ -71,7 +91,7 @@ function getAllCustomers() {
   for (let i = 0; i < salmonCookieLocations.length; i++) {
     let currentLocation = salmonCookieLocations[i];
     currentLocation.getCustomers();
-    console.log(`${currentLocation.name} was visited by ${currentLocation.numCust} customers`);
+    console.log(`${currentLocation.name} was visited by ${currentLocation.customers} customers`);
   }
 }
 
@@ -103,7 +123,6 @@ function renderLocation(location) {
   //   const liElem = document.createElement('li');
   //   liElem.textContent = currentInterest;
   //   ulElem.appendChild(liElem);
-// }
 }
 
 function renderAllLocations() {
