@@ -6,47 +6,71 @@ const locationDiv = document.getElementById('locationProfiles');
 
 const seattle = {
   name: 'Seattle',
+  // fifteen items in hoursOpen: 0-13hours+total
+  hoursOpen: [6am, 7am, 8am, 9am, 10am, 11am, 12pm, 1pm, 2pm, 3pm, 4pm, 5pm, 6pm, 7pm, total=(hoursOpen[0]+hoursOpen[1]+hoursOpen[2]+hoursOpen[3]+hoursOpen[4]+hoursOpen[5]+hoursOpen[6]+hoursOpen[7]+hoursOpen[8]+hoursOpen[9]+hoursOpen[10]+hoursOpen[11]+hoursOpen[12]+hoursOpen[13])]
   customers: null,
-  avgCookie: null,
+  avgCookie: 6.3,
+  cookies: null,
   getCustomers: function() {
     this.customers = `${_randomCustomers(23, 65)} customers`; 
-  }
+  },
+  getCookies: function() {
+    this.cookies =`${cookiesPerHour(hoursOpen*avgCookie)} cookies per hour`; 
+  },
 }
 
 const tokyo = {
   name: 'Tokyo',
+  hoursOpen: [6am, 7am, 8am, 9am, 10am, 11am, 12pm, 1pm, 2pm, 3pm, 4pm, 5pm, 6pm, 7pm, total=(hoursOpen[0]+hoursOpen[1]+hoursOpen[2]+hoursOpen[3]+hoursOpen[4]+hoursOpen[5]+hoursOpen[6]+hoursOpen[7]+hoursOpen[8]+hoursOpen[9]+hoursOpen[10]+hoursOpen[11]+hoursOpen[12]+hoursOpen[13])]
   customers: null,
-  avgCookie: null,
+  avgCookie: 1.2,
+  cookies: null,
   getCustomers: function() {
     this.customers = `${_randomCustomers(3, 24)} customers`; 
-  }
+  },
+  getCookies: function() {
+    this.cookies =`${cookiesPerHour(hoursOpen*avgCookie)} cookies per hour`; 
+  },
 }
 
 const dubai = {
   name: 'Dubai',
+  hoursOpen: [6am, 7am, 8am, 9am, 10am, 11am, 12pm, 1pm, 2pm, 3pm, 4pm, 5pm, 6pm, 7pm, total=(hoursOpen[0]+hoursOpen[1]+hoursOpen[2]+hoursOpen[3]+hoursOpen[4]+hoursOpen[5]+hoursOpen[6]+hoursOpen[7]+hoursOpen[8]+hoursOpen[9]+hoursOpen[10]+hoursOpen[11]+hoursOpen[12]+hoursOpen[13])]
   customers: null,
-  avgCookie: null,
+  avgCookie: 3.7,
+  cookies: null,
   getCustomers: function() {
     this.customers = `${_randomCustomers(11, 38)} customers`; 
-  }
+  },
+  getCookies: function() {
+    this.cookies =`${cookiesPerHour(hoursOpen*avgCookie)} cookies per hour`; 
+  },
 }
 
 const paris = {
   name: 'Paris',
+  hoursOpen: [6am, 7am, 8am, 9am, 10am, 11am, 12pm, 1pm, 2pm, 3pm, 4pm, 5pm, 6pm, 7pm, total=(hoursOpen[0]+hoursOpen[1]+hoursOpen[2]+hoursOpen[3]+hoursOpen[4]+hoursOpen[5]+hoursOpen[6]+hoursOpen[7]+hoursOpen[8]+hoursOpen[9]+hoursOpen[10]+hoursOpen[11]+hoursOpen[12]+hoursOpen[13])]
   customers: null,
-  avgCookie: null,
+  avgCookie: 2.3,
   getCustomers: function() {
     this.customers = `${_randomCustomers(20, 38)} customers`; 
-  }
+  },
+  getCookies: function() {
+    this.cookies =`${cookiesPerHour(hoursOpen*avgCookie)} cookies per hour`; 
+  },
 }
 
 const lima = {
   name: 'Lima',
+  hoursOpen: [6am, 7am, 8am, 9am, 10am, 11am, 12pm, 1pm, 2pm, 3pm, 4pm, 5pm, 6pm, 7pm, total=(hoursOpen[0]+hoursOpen[1]+hoursOpen[2]+hoursOpen[3]+hoursOpen[4]+hoursOpen[5]+hoursOpen[6]+hoursOpen[7]+hoursOpen[8]+hoursOpen[9]+hoursOpen[10]+hoursOpen[11]+hoursOpen[12]+hoursOpen[13])]
   customers: null,
-  avgCookie: null,
+  avgCookie: 4.6,
   getCustomers: function() {
     this.customers = `${_randomCustomers(2, 16)} customers`; 
-  }
+  },
+  getCookies: function() {
+    this.cookies =`${cookiesPerHour(hoursOpen*avgCookie)} cookies per hour`; 
+  },
 }
 
 // write a function that gets a random amount of customers
@@ -57,6 +81,7 @@ function _randomCustomers(min, max) {
   // returns the amount of customers
   return number;
 }
+
 seattle.getCustomers();
 console.log(seattle);
 
