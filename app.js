@@ -2,7 +2,11 @@
 
 console.log('smells like updog in here');
 
+<<<<<<< HEAD
 const kittenDiv = document.getElementById('locationProfiles');
+=======
+const locationDiv = document.getElementById('locationProfiles');
+>>>>>>> class06-objects
 
 const seattle = {
   name: 'Seattle',
