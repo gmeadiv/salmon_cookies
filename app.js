@@ -18,20 +18,20 @@ const seattle = {
     for (let i=0; i < hoursOpen.length; i++) {
       this.customersPerHour.push(randomCustomers(this.minCustomers, this.maxCustomers));
     }
-    console.log(this.customersPerHour)
+    // console.log(this.customersPerHour)
   },
   getCookiesPerHour: function() {
     for (let i=0; i < hoursOpen.length; i++) {
       this.cookiesPerHour.push(this.customersPerHour[i] * this.avgCookie);
     }
-    console.log(this.cookiesPerHour)
+    // console.log(this.cookiesPerHour)
   },
   getTotalCookies: function() {
     let totalCookies = 0
     for (let i=0; i < this.cookiesPerHour.length; i++) {
       this.totalCookies += this.cookiesPerHour[i];
     }
-    console.log(this.totalCookies)
+    // console.log(this.totalCookies)
   },
 }
 
@@ -67,20 +67,20 @@ const tokyo = {
     for (let i=0; i < hoursOpen.length; i++) {
       this.customersPerHour.push(randomCustomers(this.minCustomers, this.maxCustomers));
     }
-    console.log(this.customersPerHour)
+    // console.log(this.customersPerHour)
   },
   getCookiesPerHour: function() {
     for (let i=0; i < hoursOpen.length; i++) {
       this.cookiesPerHour.push(this.customersPerHour[i] * this.avgCookie);
     }
-    console.log(this.cookiesPerHour)
+    // console.log(this.cookiesPerHour)
   },
   getTotalCookies: function() {
     let totalCookies = 0
     for (let i=0; i < this.cookiesPerHour.length; i++) {
       this.totalCookies += this.cookiesPerHour[i];
     }
-    console.log(this.totalCookies)
+    // console.log(this.totalCookies)
   },
 }
 
@@ -101,20 +101,20 @@ const dubai = {
     for (let i=0; i < hoursOpen.length; i++) {
       this.customersPerHour.push(randomCustomers(this.minCustomers, this.maxCustomers));
     }
-    console.log(this.customersPerHour)
+    // console.log(this.customersPerHour)
   },
   getCookiesPerHour: function() {
     for (let i=0; i < hoursOpen.length; i++) {
       this.cookiesPerHour.push(this.customersPerHour[i] * this.avgCookie);
     }
-    console.log(this.cookiesPerHour)
+    // console.log(this.cookiesPerHour)
   },
   getTotalCookies: function() {
     let totalCookies = 0
     for (let i=0; i < this.cookiesPerHour.length; i++) {
       this.totalCookies += this.cookiesPerHour[i];
     }
-    console.log(this.totalCookies)
+    // console.log(this.totalCookies)
   },
 }
 
@@ -135,20 +135,20 @@ const paris = {
     for (let i=0; i < hoursOpen.length; i++) {
       this.customersPerHour.push(randomCustomers(this.minCustomers, this.maxCustomers));
     }
-    console.log(this.customersPerHour)
+    // console.log(this.customersPerHour)
   },
   getCookiesPerHour: function() {
     for (let i=0; i < hoursOpen.length; i++) {
       this.cookiesPerHour.push(this.customersPerHour[i] * this.avgCookie);
     }
-    console.log(this.cookiesPerHour)
+    // console.log(this.cookiesPerHour)
   },
   getTotalCookies: function() {
     let totalCookies = 0
     for (let i=0; i < this.cookiesPerHour.length; i++) {
       this.totalCookies += this.cookiesPerHour[i];
     }
-    console.log(this.totalCookies)
+    // console.log(this.totalCookies)
   },
 }
 
@@ -169,20 +169,20 @@ const lima = {
     for (let i=0; i < hoursOpen.length; i++) {
       this.customersPerHour.push(randomCustomers(this.minCustomers, this.maxCustomers));
     }
-    console.log(this.customersPerHour)
+    // console.log(this.customersPerHour)
   },
   getCookiesPerHour: function() {
     for (let i=0; i < hoursOpen.length; i++) {
       this.cookiesPerHour.push(this.customersPerHour[i] * this.avgCookie);
     }
-    console.log(this.cookiesPerHour)
+    // console.log(this.cookiesPerHour)
   },
   getTotalCookies: function() {
     let totalCookies = 0
     for (let i=0; i < this.cookiesPerHour.length; i++) {
       this.totalCookies += this.cookiesPerHour[i];
     }
-    console.log(this.totalCookies)
+    // console.log(this.totalCookies)
   },
 }
 
@@ -198,7 +198,7 @@ function getAllTotalCookies() {
   for (let i = 0; i < salmonCookieLocations.length; i++) {
     let currentLocation = salmonCookieLocations[i];
     currentLocation.getTotalCookies();
-    console.log(`${currentLocation.location} was visited by ${currentLocation.totalCookies} customers`);
+    console.log(`${currentLocation.location} sold ${currentLocation.totalCookies} cookies today!`);
   }
 }
 getAllTotalCookies();
