@@ -198,10 +198,9 @@ function getAllTotalCookies() {
   for (let i = 0; i < salmonCookieLocations.length; i++) {
     let currentLocation = salmonCookieLocations[i];
     currentLocation.getTotalCookies();
-    console.log(`${currentLocation.name} was visited by ${currentLocation.totalCookies} customers`);
+    console.log(`${currentLocation.location} was visited by ${currentLocation.totalCookies} customers`);
   }
 }
-
 getAllTotalCookies();
 
 function renderLocation(location) {
