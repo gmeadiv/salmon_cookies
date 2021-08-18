@@ -1,4 +1,31 @@
-table * {
-  border: 1px solid black;
-  border-collapse: collapse;
+title {
+
+}
+
+body {
+  background-color: gray;
+}
+
+header {
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+h1.header {
+  font-family: 'STIX Two Text', serif;
+
+}
+
+em.header {
+  color:salmon;
+}
+
+main {
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+table {
+  border: 2px solid black;
+  border-radius: 5px;
 }

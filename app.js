@@ -38,19 +38,17 @@ SalmonCookiesLLC.prototype.getTotalCookies = function() {
   }
   // console.log(this.totalCookies)
 }
-// this function generates a random amount of customers
-// takes in a min and max number of customers
+  // this function generates a random amount of customers
 function randomCustomers(minCustomers, maxCustomers) {
-      // runs a Math.random for min/max
   let number = Math.floor(Math.random() * (maxCustomers - minCustomers) + minCustomers);
-      // returns the amount of customers
   return number;
 }
-    // this function generates the total amount of cookies for a location
+  // this function generates the total amount of cookies for a location
 function getCookiesPerHour(a, b) {
   let number = a * b;
   return number;
 }
+
 function _makeElement(tag, parent, text) {
   const element = document.createElement(tag);
   parent.appendChild(element);
@@ -60,7 +58,7 @@ function _makeElement(tag, parent, text) {
   return element;
 }
 
-// CALLS:
+// LOCATION CALLS:
 const seattle = new SalmonCookiesLLC('Seattle', 23, 65, 6.3)
 seattle.getCustomersPerHour();
 seattle.getCookiesPerHour();
