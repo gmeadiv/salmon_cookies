@@ -3,7 +3,7 @@ title {
 }
 
 body {
-  background-color: gray;
+  background-color: slategray;
 }
 
 header {
@@ -13,10 +13,9 @@ header {
 
 h1.header {
   font-family: 'STIX Two Text', serif;
-
 }
 
-em.header {
+.salmon {
   color:salmon;
 }
 
@@ -25,7 +24,12 @@ main {
   border-radius: 10px;
 }
 
+h2 {
+  font-family: 'STIX Two Text', serif;
+}
+
 table {
   border: 2px solid black;
   border-radius: 5px;
+  color: black;
 }

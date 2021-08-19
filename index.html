@@ -15,90 +15,165 @@
 </head>
 <body>
   <header>
-    <h1 class="header">Get yourself a one-of-a-kind Northwest treat: <em class="header">Salmon Cookies!</em></h1>
+    <h1 class="header">Get yourself a one-of-a-kind Northwest treat: <em class="salmon">Salmon Cookies!</em></h1>
   </header>
   <main>
-    <h2>Sales for all branches:</h2>
-    <div id="locations">
-        <!-- generate this from js: -->
-        <!-- <article>
-          <h2></h2>
-          <p></p>
-          <ul>
-            <li></li>
-          </ul>
-          <img>
-        </article> -->
-    </div>
-    <div id="dailyLocationTotals">
-      <table>
-        <div class="thead">
-          <thead>
-            <tr>
-              <th>Location</th>
-              <th>6:00am</th>
-              <th>7:00am</th>
-              <th>8:00am</th>
-              <th>9:00am</th>
-              <th>10:00am</th>
-              <th>11:00am</th>
-              <th>12:00pm</th>
-              <th>1:00pm</th>
-              <th>2:00pm</th>
-              <th>3:00pm</th>
-              <th>4:00pm</th>
-              <th>5:00pm</th>
-              <th>6:00pm</th>
-              <th>7:00pm</th>
-              <th>Daily Location Total</th>
-            </tr>
-          </thead>
-        </div>
-          <tbody>
-            <tr>
-              <th></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <th></th>
-            </tr>
-          </tbody>
-          <!-- <tfoot>
-            <tr>
-              <th>Totals</th>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-                <td>tbd</td>
-              <th>DLTtbd</th>
-            </tr>
-          </tfoot> -->
+    <div id="Location">
+      <h2>You Can Find <em class="salmon">Salmon Cookies</em> All Around the World!</h2>
+    </div> 
+    <table>
+      <div id="locationInfo">
+          <div id="theadIndex">
+            <thead>
+              <tr>
+                <th>Seattle</th>
+                <th>6:00am</th>
+                <th>7:00am</th>
+                <th>8:00am</th>
+                <th>9:00am</th>
+                <th>10:00am</th>
+                <th>11:00am</th>
+                <th>12:00pm</th>
+                <th>1:00pm</th>
+                <th>2:00pm</th>
+                <th>3:00pm</th>
+                <th>4:00pm</th>
+                <th>5:00pm</th>
+                <th>6:00pm</th>
+                <th>7:00pm</th>
+              </tr>
+              <tr>
+                <th>Tokyo</th>
+                <th>6:00am</th>
+                <th>7:00am</th>
+                <th>8:00am</th>
+                <th>9:00am</th>
+                <th>10:00am</th>
+                <th>11:00am</th>
+                <th>12:00pm</th>
+                <th>1:00pm</th>
+                <th>2:00pm</th>
+                <th>3:00pm</th>
+                <th>4:00pm</th>
+                <th>5:00pm</th>
+                <th>6:00pm</th>
+                <th>7:00pm</th>
+              </tr>
+              <tr>
+                <th>Dubai</th>
+                <th>6:00am</th>
+                <th>7:00am</th>
+                <th>8:00am</th>
+                <th>9:00am</th>
+                <th>10:00am</th>
+                <th>11:00am</th>
+                <th>12:00pm</th>
+                <th>1:00pm</th>
+                <th>2:00pm</th>
+                <th>3:00pm</th>
+                <th>4:00pm</th>
+                <th>5:00pm</th>
+                <th>6:00pm</th>
+                <th>7:00pm</th>
+              </tr>
+              <tr>
+                <th>Paris</th>
+                <th>6:00am</th>
+                <th>7:00am</th>
+                <th>8:00am</th>
+                <th>9:00am</th>
+                <th>10:00am</th>
+                <th>11:00am</th>
+                <th>12:00pm</th>
+                <th>1:00pm</th>
+                <th>2:00pm</th>
+                <th>3:00pm</th>
+                <th>4:00pm</th>
+                <th>5:00pm</th>
+                <th>6:00pm</th>
+                <th>7:00pm</th>
+              </tr>
+              <tr>
+                <th>Lima</th>
+                <th>6:00am</th>
+                <th>7:00am</th>
+                <th>8:00am</th>
+                <th>9:00am</th>
+                <th>10:00am</th>
+                <th>11:00am</th>
+                <th>12:00pm</th>
+                <th>1:00pm</th>
+                <th>2:00pm</th>
+                <th>3:00pm</th>
+                <th>4:00pm</th>
+                <th>5:00pm</th>
+                <th>6:00pm</th>
+                <th>7:00pm</th>
+              </tr>
+            </thead>
+          </div>
         </table>
+        <div id="tbodyIndex">
+            <table>
+              <tr>
+                <th>Contact Information:</th>
+              </tr>
+              <tr>
+                <th>Seattle</th>
+                  <td>(206)666-1340</td>
+                  <td>pleasedonot@email.seattle</td>
+              </tr>
+              <tr>
+                <th>Tokyo</th>
+                  <td>(206)666-1341</td>
+                  <td>pleasedonot@email.tokyo</td>
+              </tr>
+              <tr>
+                <th>Dubai</th>
+                  <td>(206)666-1342</td>
+                  <td>pleasedonot@email.dubai</td>
+              </tr>
+              <tr>
+                <th>Paris</th>
+                  <td>(206)666-1343</td>
+                  <td>pleasedonot@email.paris</td>
+              </tr>
+              <tr>
+                <th>Lima</th>
+                  <td>(206)666-1344</td>
+                  <td>pleasedonot@email.lima</td>
+              </tr>
+            </table>
+          </div>
+          <div id="tfootIndex">
+            <!-- <tfoot>
+              <tr>
+                <th>Grand Totals</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                <th></th>
+              </tr>
+            </tfoot> -->
+          </div>
       </div>
-    </main>
-    <footer>
-    </footer>
+    </table>
+    </section>
+  </main>
+  <footer>
+    <a href="sales.html">Go to Sales Page</a>
     <script src="app.js"></script>
-  </body>
+  </footer>
+</body>
 </html>
