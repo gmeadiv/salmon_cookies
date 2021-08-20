@@ -62,8 +62,13 @@ table {
   border: 5px solid salmon;
   border-radius: 5px;
   color: black;
+  background-color: cadetblue;
 }
 
 table th {
   color: black;
+  background-color: salmon;
+  margin: salmon;
+  border: salmon;
+  padding: salmon;
 }
