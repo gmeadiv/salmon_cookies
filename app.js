@@ -112,15 +112,20 @@ console.log(SalmonCookiesLLC.salmonLLCarray);
 const formElem = document.getElementById('formSection')
 
 function handleSubmit(event) {
-  event.preventDefault()
-  console.log(event);
-  console.log(event.target.name.value);
-  const name = event.target.name.value;
-  const minCustomers = event.target.minCustomers.value;
-  const maxCustomers = event.target.maxCustomers.value;
-  const avgCookie = event.target.avgCookie.value;
-
+  event.preventDefault();
+  const target = event.target;
+  // console.log(event);
+  // console.log(event.target.name.value);
+  let name = target.name.value;
+  let minCustomers = target.minCustomers.value;
+  minCustomers = parseInt(minCustomers);
+  let maxCustomers = target.maxCustomers.value;
+  maxCustomers = parseInt(maxCustomers);
+  let avgCookie = target.avgCookie.value;
+  avgCookie = parseInt(avgCookie);
+  let hoursOpen = event.target.hoursOpen.value;
   let usersSalmonCookie = new SalmonCookiesLLC(name, minCustomers, maxCustomers, avgCookie);
+
   console.log(usersSalmonCookie);
   usersSalmonCookie.randomCustomers();
   usersSalmonCookie.renderSingleLocation();
