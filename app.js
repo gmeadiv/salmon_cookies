@@ -114,7 +114,7 @@ const formElem = document.getElementById('formSection')
 function handleSubmit(event) {
   event.preventDefault();
   const target = event.target;
-  // console.log(event);
+  console.log(target);
   // console.log(event.target.name.value);
   let name = target.name.value;
   let minCustomers = target.minCustomers.value;
@@ -123,17 +123,22 @@ function handleSubmit(event) {
   maxCustomers = parseInt(maxCustomers);
   let avgCookie = target.avgCookie.value;
   avgCookie = parseInt(avgCookie);
-  let hoursOpen = event.target.hoursOpen.value;
   let usersSalmonCookie = new SalmonCookiesLLC(name, minCustomers, maxCustomers, avgCookie);
 
   console.log(usersSalmonCookie);
-  usersSalmonCookie.randomCustomers();
-  usersSalmonCookie.renderSingleLocation();
+  usersSalmonCookie.getCustomersPerHour();
+  usersSalmonCookie.getCookiesPerHour();
+  usersSalmonCookie.getTotalCookies();
+  // At this point, completely erase the contents of the table, and re-render an entire new thead, tbody, tfoot
+  locationsTable.innerHTML = '';
+  makeTableHeader();
+  renderAllLocations();
+  makeTableFooter();
   event.target.reset();
 }
 
 formElem.addEventListener('submit', handleSubmit);
-handleSubmit();
+// handleSubmit();
 
 // MAKING A TABLE 
 SalmonCookiesLLC.prototype.renderSingleLocation = function(body) {
